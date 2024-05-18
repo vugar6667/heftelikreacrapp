@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@keyframes slide-out-right {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.card {
+  transition: all 0.3s ease;
+}
+
+.card.removing {
+  animation: slide-out-right 0.5s forwards;
+}
